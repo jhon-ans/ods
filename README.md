@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canasta Gourmet - Hambre Cero</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.1/chart.min.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Canasta Gourmet</h1>
+        <p>Solución innovadora contra la desnutrición en Cusco y Calca</p>
+        <nav>
+            <ul>
+                <li><a href="#impacto">Impacto</a></li>
+                <li><a href="#solucion">Solución</a></li>
+                <li><a href="#galeria">Galería</a></li>
+                <li><a href="#recetas">Recetas</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section id="impacto">
+        <h2>Impacto del Proyecto</h2>
+        <canvas id="impactChart"></canvas>
+        <p>Este proyecto ha logrado reducir la desnutrición infantil en un 20% en el último año.</p>
+    </section>
+    
+    <section id="solucion">
+        <h2>Solución: La Canasta Gourmet</h2>
+        <p>Incluye productos locales y un recetario para mejorar la alimentación infantil.</p>
+        <img src="canasta.jpg" alt="Imagen de la Canasta Gourmet">
+    </section>
+    
+    <section id="galeria">
+        <h2>Evidencias del Proceso</h2>
+        <div class="carousel">
+            <img src="img1.jpg" alt="Foto 1">
+            <img src="img2.jpg" alt="Foto 2">
+            <img src="img3.jpg" alt="Foto 3">
+        </div>
+    </section>
+    
+    <section id="recetas">
+        <h2>Recetas Nutritivas</h2>
+        <div class="recetas-container">
+            <div class="receta">
+                <h3>Papilla de Quinua</h3>
+                <p>Ingredientes: quinua, leche, miel.</p>
+                <img src="papilla.jpg" alt="Papilla de Quinua">
+            </div>
+            <div class="receta">
+                <h3>Sopa de Kiwicha</h3>
+                <p>Ingredientes: kiwicha, verduras, caldo de pollo.</p>
+                <img src="sopa.jpg" alt="Sopa de Kiwicha">
+            </div>
+        </div>
+    </section>
+    
+    <section id="contacto">
+        <h2>Contacto</h2>
+        <p>Email: info@proyectohambrecero.com</p>
+        <p>Teléfono: +51 987 654 321</p>
+        <button onclick="alert('Gracias por tu interés!')">Quiero Apoyar</button>
+    </section>
+    
+    <footer>
+        <p>&copy; 2025 Canasta Gourmet - Todos los derechos reservados</p>
+    </footer>
+    
+    <script>
+        const ctx = document.getElementById('impactChart').getContext('2d');
+        new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: ['Cusco', 'Calca'],
+                datasets: [{
+                    label: 'Tasa de Desnutrición (%)',
+                    data: [30, 25],
+                    backgroundColor: ['#ff6384', '#36a2eb']
+                }]
+            }
+        });
+    </script>
+</body>
+</html>
